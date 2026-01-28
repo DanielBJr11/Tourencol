@@ -1,10 +1,10 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Contáctanos | Tourencol</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -17,11 +17,11 @@
 
     body {
       min-height: 100vh;
-      color: #ffffff;
+      color: #fff;
       overflow: hidden;
     }
 
-    /* Video fondo */
+    /* Fondo */
     .video-bg {
       position: fixed;
       inset: 0;
@@ -31,7 +31,6 @@
       z-index: -3;
     }
 
-    /* Overlay profesional (degradado) */
     .overlay {
       position: fixed;
       inset: 0;
@@ -39,38 +38,26 @@
         to bottom,
         rgba(0,0,0,0.35),
         rgba(0,0,0,0.25),
-        rgba(0,0,0,0.45)
+        rgba(0,0,0,0.5)
       );
       z-index: -2;
     }
 
-    /* Contenedor */
+    /* Contenedor principal */
     .page {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding-top: 40px;
+      justify-content: flex-start; /* 🔥 clave */
+      padding-top: 60px;           /* 🔥 subir todo */
       position: relative;
-      animation: fadeIn 0.8s ease;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     /* Logo */
     .logo img {
-      width: 160px;
-      margin-bottom: 10px;
+      width: 155px;
+      margin-bottom: 8px;
     }
 
     /* Título */
@@ -78,7 +65,7 @@
       font-size: 30px;
       font-weight: 700;
       letter-spacing: 1px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       text-align: center;
     }
 
@@ -87,18 +74,19 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      z-index: 5;
+      margin-top: 5px;
+      z-index: 4;
     }
 
     .link-btn {
-      width: 260px;
-      padding: 15px;
+      width: 245px; /* 🔥 más corto */
+      padding: 14px;
       border-radius: 40px;
       text-align: center;
       text-decoration: none;
       font-size: 16px;
       font-weight: 600;
-      color: #1e2a1e;
+      color: #1f2a1f;
       background: rgba(198, 215, 185, 0.8);
       border: 1px solid rgba(255,255,255,0.35);
       backdrop-filter: blur(6px);
@@ -109,32 +97,31 @@
     .link-btn:hover {
       transform: translateY(-2px);
       background: rgba(198, 215, 185, 0.95);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
     }
 
     /* Capibara */
     .capibara {
       position: absolute;
-      bottom: -8px;
-      right: -20px;
-      z-index: 2;
-      opacity: 0.95;
+      bottom: -20px; /* 🔥 más abajo */
+      right: -30px;
+      z-index: 1;    /* 🔥 detrás */
+      opacity: 0.9;
     }
 
     .capibara img {
-      width: 220px;
+      width: 200px;
       pointer-events: none;
     }
 
     /* Footer */
     .footer {
       position: absolute;
-      bottom: 25px;
-      left: 25px;
+      bottom: 20px;
+      left: 20px;
       font-size: 14px;
       line-height: 1.4;
       font-weight: 500;
-      opacity: 0.95;
+      z-index: 3;
     }
 
     /* Desktop */
@@ -171,15 +158,12 @@
 
   <div class="page">
 
-    <!-- Logo -->
     <div class="logo">
       <img src="img/logo.png" alt="Logo Tourencol">
     </div>
 
-    <!-- Título -->
     <h1>CONTÁCTANOS</h1>
 
-    <!-- Botones -->
     <div class="links">
       <a class="link-btn" href="https://wa.me/message/NWTKUGQ4OCITF1" target="_blank">WhatsApp</a>
       <a class="link-btn" href="https://www.facebook.com/Tourencol" target="_blank">Facebook</a>
@@ -188,12 +172,10 @@
       <a class="link-btn" href="#" onclick="return false;">Portafolio</a>
     </div>
 
-    <!-- Capibara -->
     <div class="capibara">
       <img src="img/capibara.png" alt="Capibara decorativo">
     </div>
 
-    <!-- Footer -->
     <div class="footer">
       <strong>TOURENCOL</strong><br>
       EMAIL<br>
@@ -204,3 +186,4 @@
 
 </body>
 </html>
+
