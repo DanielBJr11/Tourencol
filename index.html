@@ -73,8 +73,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 18px;
-      margin-top: -60px; /* Desktop */
+      gap: 18px; /* espacio entre banners */
+      margin-top: -60px; /* desktop */
     }
 
     .link-btn {
@@ -123,18 +123,20 @@
 
     /* Ajustes específicos para móvil */
     @media (max-width: 480px) {
+      /* Agrandar logos */
       .logo img {
-        width: 160px;
+        width: 170px; /* un poco más grande */
       }
 
       h1 {
-        font-size: 24px;
-        margin-top: 10px; /* menos espacio sobre banners */
+        font-size: 26px; /* un poco más grande */
+        margin-top: 10px; /* menos espacio arriba */
       }
 
+      /* Links / banners */
       .links {
-        margin-top: -10px; /* subir los banners mucho más */
-        gap: 14px; /* menos espacio entre banners */
+        margin-top: -5px; /* banners más cerca de contáctanos */
+        gap: 10px; /* espacio reducido entre banners */
       }
 
       .link-btn {
@@ -143,15 +145,17 @@
         font-size: 14px;
       }
 
+      /* Capibara */
       .capibara img {
-        width: 180px; /* achicar capibara */
+        width: 180px; /* tamaño adecuado */
       }
 
       .capibara {
-        bottom: -30px; /* bajar capibara para que la patita quede fuera del plano */
+        bottom: -10px; /* subir capibara un poquito */
         right: -20px;
       }
 
+      /* Footer */
       .footer {
         font-size: 14px;
       }
