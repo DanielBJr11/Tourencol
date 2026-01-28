@@ -74,7 +74,7 @@
       justify-content: center;
       align-items: center;
       gap: 18px;
-      margin-top: -60px; /* subir más los banners en desktop */
+      margin-top: -60px; /* Desktop */
     }
 
     .link-btn {
@@ -121,19 +121,20 @@
       font-weight: 500;
     }
 
-    /* Ajustes responsivos para móvil */
+    /* Ajustes específicos para móvil */
     @media (max-width: 480px) {
       .logo img {
         width: 160px;
       }
 
-      .capibara img {
-        width: 250px;
+      h1 {
+        font-size: 24px;
+        margin-top: 10px; /* menos espacio sobre banners */
       }
 
-      .capibara {
-        bottom: -80px; /* bajar capibara para que la patita salga del plano */
-        right: -40px;
+      .links {
+        margin-top: -10px; /* subir los banners mucho más */
+        gap: 14px; /* menos espacio entre banners */
       }
 
       .link-btn {
@@ -142,16 +143,17 @@
         font-size: 14px;
       }
 
-      h1 {
-        font-size: 24px;
+      .capibara img {
+        width: 180px; /* achicar capibara */
+      }
+
+      .capibara {
+        bottom: -30px; /* bajar capibara para que la patita quede fuera del plano */
+        right: -20px;
       }
 
       .footer {
         font-size: 14px;
-      }
-
-      .links {
-        margin-top: -20px; /* subir los banners para que no queden tan abajo */
       }
     }
   </style>
