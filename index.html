@@ -1,135 +1,194 @@
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contáctanos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-  min-height: 100vh;
-  color: #fff;
-  overflow: hidden;
-}
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
-/* Fondo */
-.video-bg {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -3;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.25);
-  z-index: -2;
-}
+    body {
+      min-height: 100vh;
+      color: #ffffff;
+      overflow: hidden;
+    }
 
-/* Página */
-.page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 30px;
-  position: relative;
-}
+    /* Video fondo */
+    .video-bg {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -3;
+    }
 
-/* Logo */
-.logo img {
-  width: 150px;
-  margin-bottom: 6px;
-}
+    /* Overlay oscuro */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.25);
+      z-index: -2;
+    }
 
-/* Título */
-h1 {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 14px;
-}
+    /* Contenedor */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 30px;
+      position: relative;
+      z-index: 1;
+    }
 
-/* Botones */
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: -5px; /* 🔥 subir bloque */
-  z-index: 5;       /* 🔥 sobre capibara */
-}
+    /* Logo */
+    .logo img {
+      width: 150px;
+      margin-bottom: 6px;
+    }
 
-.link-btn {
-  width: 255px; /* 🔥 más compacto */
-  padding: 15px;
-  border-radius: 40px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  color: #1f1f1f;
-  background: rgba(190, 215, 175, 0.75); /* 🔥 más tipo Canva */
-  backdrop-filter: blur(4px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-  transition: transform 0.2s ease, background 0.2s ease;
-}
+    /* Título */
+    h1 {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
 
-.link-btn:hover {
-  transform: scale(1.03);
-  background: rgba(190, 215, 175, 0.9);
-}
+    /* Botones */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: -5px;
+      z-index: 5;
+    }
 
-/* Capibara */
-.capibara {
-  position: absolute;
-  bottom: -8px;
-  right: -20px;
-  z-index: 1; /* 🔥 detrás de botones */
-  opacity: 0.95;
-}
+    .link-btn {
+      width: 255px;
+      padding: 15px;
+      border-radius: 40px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1f1f1f;
+      background: rgba(190, 215, 175, 0.75);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
 
-.capibara img {
-  width: 210px;
-  pointer-events: none;
-}
+    .link-btn:hover {
+      transform: scale(1.03);
+      background: rgba(190, 215, 175, 0.9);
+    }
 
-/* Footer */
-.footer {
-  position: absolute;
-  bottom: 25px;
-  left: 25px;
-  font-size: 15px;
-  line-height: 1.4;
-  font-weight: 500;
-  z-index: 4;
-}
+    /* Capibara */
+    .capibara {
+      position: absolute;
+      bottom: -8px;
+      right: -20px;
+      z-index: 2;
+      opacity: 0.95;
+    }
 
-/* Desktop */
-@media (min-width: 768px) {
+    .capibara img {
+      width: 210px;
+      pointer-events: none;
+    }
 
-  .logo img {
-    width: 190px;
-  }
+    /* Footer */
+    .footer {
+      position: absolute;
+      bottom: 25px;
+      left: 25px;
+      font-size: 15px;
+      line-height: 1.4;
+      font-weight: 500;
+      z-index: 4;
+    }
 
-  h1 {
-    font-size: 34px;
-  }
+    /* Desktop */
+    @media (min-width: 768px) {
 
-  .links {
-    gap: 12px;
-  }
+      .logo img {
+        width: 190px;
+      }
 
-  .link-btn {
-    width: 320px;
-    font-size: 18px;
-  }
+      h1 {
+        font-size: 34px;
+      }
 
-  .capibara img {
-    width: 380px;
-  }
-}
-</style>
+      .links {
+        gap: 12px;
+      }
+
+      .link-btn {
+        width: 320px;
+        font-size: 18px;
+      }
+
+      .capibara img {
+        width: 380px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Video fondo -->
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="img/video.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="page">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo Tourencol">
+    </div>
+
+    <!-- Título -->
+    <h1>CONTÁCTANOS</h1>
+
+    <!-- Botones -->
+    <div class="links">
+      <a class="link-btn" href="https://wa.me/message/NWTKUGQ4OCITF1" target="_blank">WhatsApp</a>
+      <a class="link-btn" href="https://www.facebook.com/Tourencol" target="_blank">Facebook</a>
+      <a class="link-btn" href="https://www.instagram.com/tourencol/" target="_blank">Instagram</a>
+      <a class="link-btn" href="https://www.tiktok.com/@tourencol" target="_blank">TikTok</a>
+      <a class="link-btn" href="#" onclick="return false;">Portafolio</a>
+    </div>
+
+    <!-- Capibara -->
+    <div class="capibara">
+      <img src="img/capibara.png" alt="Capibara decorativo">
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <strong>TOURENCOL</strong><br>
+      EMAIL<br>
+      reservas@tourencol.com.co
+    </div>
+
+  </div>
+
+</body>
+</html>
