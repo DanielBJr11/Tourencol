@@ -73,15 +73,15 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 18px; /* espacio entre banners */
-      margin-top: -60px; /* desktop */
+      gap: 18px;
+      margin-top: -60px; /* Desktop */
     }
 
     .link-btn {
       width: 260px;
       padding: 16px;
       text-align: center;
-      background: rgba(34, 139, 34, 0.6);
+      background: rgba(34, 139, 34, 0.4); /* más transparente */
       color: #ffffff;
       text-decoration: none;
       border-radius: 30px;
@@ -93,7 +93,7 @@
 
     .link-btn:hover {
       transform: scale(1.05);
-      background: rgba(34, 139, 34, 0.8);
+      background: rgba(34, 139, 34, 0.6);
     }
 
     /* Capibara decorativo */
@@ -125,24 +125,25 @@
     @media (max-width: 480px) {
       /* Agrandar logos */
       .logo img {
-        width: 170px; /* un poco más grande */
+        width: 170px;
       }
 
       h1 {
-        font-size: 26px; /* un poco más grande */
-        margin-top: 10px; /* menos espacio arriba */
+        font-size: 28px; /* un poco más grande */
+        margin-top: 5px; /* menos espacio sobre banners */
       }
 
       /* Links / banners */
       .links {
-        margin-top: -5px; /* banners más cerca de contáctanos */
-        gap: 10px; /* espacio reducido entre banners */
+        margin-top: 0px; /* acercar banners al título */
+        gap: 8px; /* menos espacio entre banners */
       }
 
       .link-btn {
         width: 200px;
         padding: 14px;
-        font-size: 14px;
+        font-size: 15px; /* un poco más grande */
+        background: rgba(34, 139, 34, 0.3); /* más transparente */
       }
 
       /* Capibara */
@@ -151,13 +152,14 @@
       }
 
       .capibara {
-        bottom: -10px; /* subir capibara un poquito */
+        bottom: -5px; /* subir capibara un poco */
         right: -20px;
       }
 
       /* Footer */
       .footer {
-        font-size: 14px;
+        font-size: 15px; /* un poco más grande */
+        bottom: 30px; /* subir footer un poco */
       }
     }
   </style>
@@ -208,3 +210,4 @@
 
 </body>
 </html>
+
