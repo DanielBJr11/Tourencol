@@ -4,12 +4,15 @@
   <title>Contáctanos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Tipografía Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
@@ -33,7 +36,7 @@
     .overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.45);
+      background: rgba(0, 0, 0, 0.35);
       z-index: -1;
     }
 
@@ -48,58 +51,63 @@
 
     /* Logo */
     .logo {
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
     .logo img {
-      width: 120px;
+      width: 180px; /* más grande */
     }
 
     /* Título */
     h1 {
       margin-top: 15px;
-      font-size: 26px;
+      font-size: 28px;
+      font-weight: 700;
       letter-spacing: 1px;
     }
 
-    /* Links */
+    /* Links / banners */
     .links {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 14px;
+      gap: 18px;
+      margin-top: -30px; /* subir un poco los botones */
     }
 
     .link-btn {
       width: 260px;
-      padding: 14px;
+      padding: 16px;
       text-align: center;
-      background: #ffffff;
-      color: #000000;
+      background: rgba(34, 139, 34, 0.6); /* verde transparente */
+      color: #ffffff;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      border-radius: 30px; /* más redondeado */
+      font-weight: 600;
+      font-size: 16px;
       transition: transform 0.2s ease, background 0.2s ease;
+      backdrop-filter: blur(4px);
     }
 
     .link-btn:hover {
-      background: #eaeaea;
-      transform: scale(1.03);
+      transform: scale(1.05);
+      background: rgba(34, 139, 34, 0.8);
     }
 
-    /* Capibara */
+    /* Capibara decorativo */
     .capibara {
       position: absolute;
-      bottom: 20px;
-      right: 20px;
+      bottom: 10px;
+      right: -20px;
+      z-index: 2; /* delante de botones */
     }
 
     .capibara img {
-      width: 120px;
-      opacity: 0.9;
+      width: 180px; /* más grande */
       pointer-events: none;
+      opacity: 0.95;
     }
 
     /* Footer */
@@ -107,17 +115,33 @@
       position: absolute;
       bottom: 20px;
       left: 20px;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.4;
+      text-align: left;
+      font-weight: 500;
     }
 
     @media (max-width: 480px) {
       .logo img {
-        width: 100px;
+        width: 140px;
       }
 
       .capibara img {
-        width: 90px;
+        width: 120px;
+      }
+
+      .link-btn {
+        width: 200px;
+        padding: 12px;
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .footer {
+        font-size: 14px;
       }
     }
   </style>
@@ -131,40 +155,25 @@
     Tu navegador no soporta video.
   </video>
 
-  <!-- Capa oscura sobre el video -->
   <div class="overlay"></div>
 
   <div class="page">
 
     <!-- Logo -->
     <div class="logo">
-      <img src="img/logo.png" alt="Logo empresa">
+      <img src="img/logo.png" alt="Logo Tourencol">
     </div>
 
     <!-- Título -->
     <h1>CONTÁCTANOS</h1>
 
-    <!-- Links -->
+    <!-- Links / banners -->
     <div class="links">
-      <a class="link-btn" href="https://wa.me/message/NWTKUGQ4OCITF1" target="_blank">
-        WhatsApp
-      </a>
-
-      <a class="link-btn" href="https://www.facebook.com/Tourencol" target="_blank">
-        Facebook
-      </a>
-
-      <a class="link-btn" href="https://www.instagram.com/tourencol/" target="_blank">
-        Instagram
-      </a>
-
-      <a class="link-btn" href="https://www.tiktok.com/@tourencol?_r=1&_t=ZS-93SFjsYbSq7" target="_blank">
-        TikTok
-      </a>
-
-      <a class="link-btn" href="#" onclick="return false;">
-        Portafolio (próximamente)
-      </a>
+      <a class="link-btn" href="https://wa.me/message/NWTKUGQ4OCITF1" target="_blank">WhatsApp</a>
+      <a class="link-btn" href="https://www.facebook.com/Tourencol" target="_blank">Facebook</a>
+      <a class="link-btn" href="https://www.instagram.com/tourencol/" target="_blank">Instagram</a>
+      <a class="link-btn" href="https://www.tiktok.com/@tourencol?_r=1&_t=ZS-93SFjsYbSq7" target="_blank">TikTok</a>
+      <a class="link-btn" href="#" onclick="return false;">Portafolio (próximamente)</a>
     </div>
 
     <!-- Capibara decorativo -->
@@ -172,9 +181,9 @@
       <img src="img/capibara.png" alt="Capibara decorativo">
     </div>
 
-    <!-- Footer actualizado -->
+    <!-- Footer -->
     <div class="footer">
-      <strong>TOURENCOL</strong><br>
+      <strong>Tourencol</strong><br>
       reservas@tourencol.com.co
     </div>
 
@@ -182,3 +191,4 @@
 
 </body>
 </html>
+
