@@ -74,7 +74,7 @@
       justify-content: center;
       align-items: center;
       gap: 18px;
-      margin-top: -60px; /* subir más los banners */
+      margin-top: -60px; /* subir más los banners en desktop */
     }
 
     .link-btn {
@@ -121,7 +121,7 @@
       font-weight: 500;
     }
 
-    /* Ajustes responsivos */
+    /* Ajustes responsivos para móvil */
     @media (max-width: 480px) {
       .logo img {
         width: 160px;
@@ -129,6 +129,11 @@
 
       .capibara img {
         width: 250px;
+      }
+
+      .capibara {
+        bottom: -80px; /* bajar capibara para que la patita salga del plano */
+        right: -40px;
       }
 
       .link-btn {
@@ -146,7 +151,7 @@
       }
 
       .links {
-        margin-top: -40px;
+        margin-top: -20px; /* subir los banners para que no queden tan abajo */
       }
     }
   </style>
@@ -197,5 +202,3 @@
 
 </body>
 </html>
-
-
