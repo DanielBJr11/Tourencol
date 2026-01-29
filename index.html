@@ -5,10 +5,14 @@
 <title>Tourencol | Contáctanos</title>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #000; /* respaldo si el video no carga */
+  background: #000;
   min-height: 100vh;
   color: white;
   overflow-x: hidden;
@@ -24,14 +28,14 @@ body {
   z-index: -2;
 }
 
-/* Oscurecer para legibilidad */
+/* Capa oscura */
 .overlay {
   min-height: 100vh;
   background: rgba(0,0,0,0.35);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px 160px;
+  padding: 35px 20px 160px;
   text-align: center;
 }
 
@@ -43,42 +47,52 @@ body {
 
 /* Título */
 h1 {
-  margin: 15px 0 25px;
+  margin: 15px 0 22px;
   letter-spacing: 2px;
+  font-size: 28px;
 }
 
 /* Botones */
 .botones {
   width: 100%;
-  max-width: 360px;
+  max-width: 320px; /* 🔥 menos ancho */
 }
 
 .botones a {
   display: block;
-  background: #c6d3af;
+  background: rgba(198, 211, 175, 0.75); /* 🔥 más translúcido */
   color: #1f2d16;
   text-decoration: none;
-  padding: 16px;
-  margin-bottom: 14px;
+  padding: 15px;
+  margin-bottom: 12px;
   border-radius: 40px;
   font-weight: bold;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-/* Footer */
+.botones a:hover {
+  background: rgba(198, 211, 175, 0.9);
+  transform: scale(1.03);
+}
+
+/* Footer alineado a la izquierda */
 .footer {
   position: absolute;
   bottom: 45px;
-  text-align: center;
+  left: 20px;
+  text-align: left;
   font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.95;
 }
 
 /* Capibara */
 .capibara {
   position: absolute;
-  bottom: 0;
+  bottom: 0;        /* 🔥 patica en el piso */
   right: 0;
-  width: 150px;
-  opacity: 0.85;
+  width: 175px;     /* 🔥 un poco más grande */
+  opacity: 0.88;
   pointer-events: none;
 }
 </style>
@@ -98,11 +112,11 @@ h1 {
   <h1>CONTÁCTANOS</h1>
 
   <div class="botones">
-    <a href="#">WhatsApp</a>
-    <a href="#">Facebook</a>
-    <a href="#">Instagram</a>
-    <a href="#">TikTok</a>
-    <a href="#">Portafolio</a>
+    <a href="https://wa.me/message/NWTKUGQ4OCITF1" target="_blank">WhatsApp</a>
+    <a href="https://www.facebook.com/Tourencol" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/tourencol/" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@tourencol" target="_blank">TikTok</a>
+    <a href="#" onclick="return false;">Portafolio</a>
   </div>
 
 </div>
