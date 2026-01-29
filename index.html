@@ -1,148 +1,96 @@
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tourencol | Contáctanos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tourencol | Contáctanos</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url("fondo.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  color: white;
+}
 
-    body {
-      min-height: 100vh;
-      background: url("fondo.jpg") no-repeat center center/cover;
-      position: relative;
-      color: #fff;
-    }
+.overlay {
+  min-height: 100vh;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 160px;
+  text-align: center;
+}
 
-    /* Oscurece un poco el fondo para mejor lectura */
-    body::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.35);
-      z-index: 0;
-    }
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
 
-    .page {
-      position: relative;
-      z-index: 2;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 45px;
-      padding-bottom: 140px; /* espacio para footer + capibara */
-      text-align: center;
-    }
+h1 {
+  margin: 15px 0 25px;
+  letter-spacing: 2px;
+}
 
-    .logo {
-      width: 120px;
-      margin-bottom: 10px;
-    }
+.botones {
+  width: 100%;
+  max-width: 360px;
+}
 
-    h1 {
-      font-size: 28px;
-      letter-spacing: 2px;
-      margin-bottom: 25px;
-    }
+.botones a {
+  display: block;
+  background: #c6d3af;
+  color: #1f2d16;
+  text-decoration: none;
+  padding: 16px;
+  margin-bottom: 14px;
+  border-radius: 40px;
+  font-weight: bold;
+}
 
-    .links {
-      width: 100%;
-      max-width: 360px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
+.footer {
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+  font-size: 14px;
+}
 
-    .links a {
-      display: block;
-      padding: 16px;
-      background: rgba(197, 211, 175, 0.9);
-      color: #1f2d16;
-      text-decoration: none;
-      border-radius: 40px;
-      font-size: 18px;
-      font-weight: 600;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .links a:hover {
-      background: rgba(215, 228, 195, 0.95);
-      transform: scale(1.02);
-    }
-
-    /* Footer */
-    .footer {
-      position: absolute;
-      bottom: 45px;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      font-size: 14px;
-      line-height: 1.5;
-      font-weight: 500;
-      z-index: 3;
-      opacity: 0.95;
-    }
-
-    /* Capibara decorativo */
-    .capibara {
-      position: absolute;
-      bottom: -10px;
-      right: -20px;
-      width: 180px;
-      z-index: 1;
-      opacity: 0.85;
-      pointer-events: none;
-    }
-
-    /* Ajustes móviles */
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 24px;
-      }
-
-      .capibara {
-        width: 150px;
-        right: -25px;
-      }
-    }
-  </style>
+.capibara {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  opacity: 0.85;
+}
+</style>
 </head>
 
 <body>
-  <div class="page">
 
-    <!-- Logo -->
-    <img src="logo.png" alt="Tourencol" class="logo" />
+<div class="overlay">
 
-    <h1>CONTÁCTANOS</h1>
+  <img src="logo.png" class="logo" alt="Tourencol">
 
-    <!-- Links -->
-    <div class="links">
-      <a href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>
-      <a href="https://facebook.com" target="_blank">Facebook</a>
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-      <a href="https://tiktok.com" target="_blank">TikTok</a>
-      <a href="#" target="_blank">Portafolio</a>
-    </div>
+  <h1>CONTÁCTANOS</h1>
 
+  <div class="botones">
+    <a href="#">WhatsApp</a>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">TikTok</a>
+    <a href="#">Portafolio</a>
   </div>
 
-  <!-- Footer -->
-  <div class="footer">
-    <strong>TOURENCOL</strong><br />
-    EMAIL<br />
-    reservas@tourencol.com.co
-  </div>
+</div>
 
-  <!-- Capibara -->
-  <img src="capibara.png" alt="Capibara Tourencol" class="capibara" />
+<div class="footer">
+  <strong>TOURENCOL</strong><br>
+  EMAIL<br>
+  reservas@tourencol.com.co
+</div>
+
+<img src="capibara.png" class="capibara" alt="Capibara">
 
 </body>
 </html>
