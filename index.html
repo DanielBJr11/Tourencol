@@ -4,6 +4,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tourencol | Contáctanos</title>
 
+<!-- Favicon usando el logo -->
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="apple-touch-icon" href="img/logo.png">
+
 <style>
 * {
   box-sizing: border-box;
@@ -39,10 +43,10 @@ body {
   text-align: center;
 }
 
-/* Logo */
+/* Logo superior (🔥 agrandado un poco) */
 .logo {
-  width: 120px;
-  margin-bottom: 10px;
+  width: 150px;   /* antes 120px */
+  margin-bottom: 12px;
 }
 
 /* Título */
@@ -55,12 +59,12 @@ h1 {
 /* Botones */
 .botones {
   width: 100%;
-  max-width: 320px; /* 🔥 menos ancho */
+  max-width: 320px;
 }
 
 .botones a {
   display: block;
-  background: rgba(198, 211, 175, 0.75); /* 🔥 más translúcido */
+  background: rgba(198, 211, 175, 0.75);
   color: #1f2d16;
   text-decoration: none;
   padding: 15px;
@@ -89,9 +93,9 @@ h1 {
 /* Capibara */
 .capibara {
   position: absolute;
-  bottom: 0;        /* 🔥 patica en el piso */
+  bottom: 0;
   right: 0;
-  width: 175px;     /* 🔥 un poco más grande */
+  width: 175px;
   opacity: 0.88;
   pointer-events: none;
 }
@@ -103,6 +107,7 @@ h1 {
 <!-- Video de fondo -->
 <video class="video-bg" autoplay muted loop playsinline>
   <source src="img/video.mp4" type="video/mp4">
+  Tu navegador no soporta video.
 </video>
 
 <div class="overlay">
@@ -127,7 +132,7 @@ h1 {
   reservas@tourencol.com.co
 </div>
 
-<img src="img/capibara.png" class="capibara" alt="Capibara">
+<img src="img/capibara.png" class="capibara" alt="Capibara decorativo">
 
 </body>
 </html>
